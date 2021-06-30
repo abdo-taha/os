@@ -121,7 +121,7 @@ int main(int argc, char *argv[]) {
 		printf("wzip: file1 [file2 ...]\n");
 		exit(1);
 	}
-	sz = 8;//getpagesize()*8;
+	sz = 1024/sizeof(char);
 	for(int i = 1; i < argc; ++i){
 		const char* filepath = argv[i];
 		int fd = open(filepath,O_RDWR);
@@ -159,7 +159,7 @@ int main(int argc, char *argv[]) {
 		
 		
 		
-		// join();
+		join();
 		for (int i = 0; i < nchunks; i++)
 		{
 			free(zipped[i]);
