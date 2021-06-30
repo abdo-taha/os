@@ -29,8 +29,8 @@ int main(int argc, char *argv[]) {
 		fclose(fp);
 	}
 	if(cnt != 0){
-		fwrite(&cnt, sizeof(int), 1, stdout);
-		fwrite(&last , sizeof(char),1,stdout);
+		// fwrite(&cnt, sizeof(int), 1, stdout);
+		// fwrite(&last , sizeof(char),1,stdout);
 	}
     return 0;
 }
